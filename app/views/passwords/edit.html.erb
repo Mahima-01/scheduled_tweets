@@ -1,7 +1,7 @@
 <h1>Edit Password/h1>
 
 <%= form_with model: Current.user, url: edit_password_path do |form| %>
-  <% if form.errors.any? %>
+  <% if form.object.errors.any? %>
     <div class="alert alert-danger">
       <% form.object.errors.full_messages.each do |message|%>
         <div><%= message %></div>
